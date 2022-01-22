@@ -4,26 +4,6 @@ Created on Mon Jun 11 12:32:34 2018
 
 @author: Samed
 """
-def func(a,b):
-    
-    """
-    bu benim ilk denemem
-    
-    parametre: 
-        
-    return: 
-    """
-    output = (((a+b)*50)/100.0)*a/b
-    
-    return output
-    
-sonuc = func(var1,var2)
-sonuc2 = func(var1,var2,)
-
-def deneme1():
-    print("bu benim ikinci denemem")
-    
-    
     
 def ilkFonk(ilk,son):
       print("hadi inş ty22 olursun") 
@@ -77,24 +57,17 @@ print("\nargs değerleri = ", args_sonucu)
 def x(y):
 
     #y = y + [2]
-    y.append(2) #ekleme böyle olur , yukardaki sadece aritmetik işlem bastırır
+    y.append(2) # above line is just arithmetic opr. this line show how we add
 
     print(y)
 
 c = [1,2,3]
-# d = c + 2   hata verir list+int olmaz
+# d = c + 2    list+int is not possible
 x(c)
 len(c)
 
 
-# %% QUIZ
-    
-# int variable yas
-# string name isim
-# fonksiyonu olacak
-# fonksiyon print(type(),len,float()) 
-# *args soyisim
-# default parametre ayakkabi numarasi
+# %% 
     
 yas = 10
 name = "ali"
@@ -115,7 +88,7 @@ print("args[0]*yas: ",sonuc)
 
 
 # %% 
-# lambda function         // sadece ufak aritmetik yapcaksan mantıklı
+# lambda function         // makes sense for basic arthmtc. opr.
 
 def hesapla(x):
     return x*x
@@ -148,18 +121,5 @@ y = []
 for each in range(0,10):
       y.append(each)
 print(y)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
