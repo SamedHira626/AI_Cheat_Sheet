@@ -94,8 +94,12 @@ liste2 = ["D","E"]
 for x in liste2: liste1.append(x)
 print(liste1) # ["A","B","C","D","E"]
 #%%
+import copy
 liste = [14,36,2,95,43,0,66]
 liste2 = liste.copy()
+liste3 = copy.copy(liste1) #shallow copy, it changes original too
+liste4 = copy.deepcopy(liste1) #deep cop, it doesn't change original
+
 liste.sort(reverse=True)
 liste2.sort()
 
@@ -373,11 +377,5 @@ print(type(a))
 strin = str(a)
 print(strin)
 print(type(strin))
-
-
-
-
-
-
 
 
