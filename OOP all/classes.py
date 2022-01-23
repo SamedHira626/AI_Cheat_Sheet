@@ -1,9 +1,3 @@
-# integer = 10
-# string = "messi" "barcelona football team"
-# %%
-integer1 = 33
-string1 = "messi"
-
 # %% classes
 
 employee1_name = "messi"
