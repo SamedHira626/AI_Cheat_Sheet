@@ -1,5 +1,7 @@
 # parent
 class Animal:
+    a = 5
+    __b = 6
     def __init__(self):
         print("animal is created")
     
@@ -13,6 +15,7 @@ class Animal:
 class Monkey(Animal):
     def __init__(self):
         super().__init__() # use init of parent(animal) class
+        print(super().a)  # superclass's variable can be used with super()
         print("monkey is created")
     
     def toString(self):
