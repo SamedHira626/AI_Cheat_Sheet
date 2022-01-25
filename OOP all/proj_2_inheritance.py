@@ -1,4 +1,10 @@
-class Website:
+class W():
+      def __init__(self, name, surname):
+            self.name = name
+            self.surname = surname
+            print("first constructor")           
+
+class Website(W):
     "parent"
     def __init__(self, name, surname):
         self.name = name
@@ -10,7 +16,7 @@ class Website:
 class Website1(Website):
     "child"
     def __init__(self, name, surname, ids):
-        Website.__init__(self, name, surname)
+       # W.__init__(self, name, surname)  # you can use superclass's superclass's constructor
         self.ids = ids
     
     def login(self):
