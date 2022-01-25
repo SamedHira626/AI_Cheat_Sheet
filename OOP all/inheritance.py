@@ -15,6 +15,7 @@ class Animal:
 class Monkey(Animal):
     def __init__(self):
         super().__init__() # use init of parent(animal) class
+        Animal.__init__(self) # use init of parent(animal) class
         print(super().a)  # superclass's variable can be used with super()
         print("monkey is created")
     
@@ -33,6 +34,7 @@ class Bird(Animal):
         print("fly")        
 #
 m1 = Monkey()
+print("----")
 m1.toString()
 m1.walk()
 m1.climb()
