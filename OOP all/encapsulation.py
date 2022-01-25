@@ -26,7 +26,6 @@ class BankAccount(object):
 p1 = BankAccount("messi", 1000, "barcelona")
 p2 = BankAccount("neymar", 2000, "paris")
 
-
 print("get method:",p1.getMoney())
 # print("get method:",p1.__money)
 p1.setMoney(5000)
