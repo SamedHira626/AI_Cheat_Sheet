@@ -20,25 +20,10 @@ class EEE(Employee):
         print("EEE: ",result)
 
 e1 = Employee()
-
 ce = CompEng()
- 
 eee = EEE()
        
 employee_list = [ce, eee]
 
 for employee in employee_list:
     employee.raisee()
-
-
-
-
-
-
-
-
-
-
-
-
-
