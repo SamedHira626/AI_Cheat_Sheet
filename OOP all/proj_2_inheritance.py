@@ -12,11 +12,15 @@ class Website(W):
     
     def loginInfo(self):
         print(self.name + " " + self.surname )
+        
+    def trying(self):
+        print("Website class's function")  
 
 class Website1(Website):
     "child"
     def __init__(self, name, surname, ids):
-        #W.__init__(self, name, surname)  # you can use superclass's superclass's constructor
+        #W.__init__(self, name, surname)  # you can use superclass's superclass's constructor 
+        super().trying()
         Website.__init__(self, name, surname) 
         self.ids = ids
     
