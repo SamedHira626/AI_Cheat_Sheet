@@ -20,6 +20,14 @@ a = "Muz tatlı bir meyvedir"
 
 print(a.replace("Muz", "Çilek"))
 #%%
+txt = "     banana     "
+x = txt.strip()
+print("of all fruits", x, "is my favorite")
+#%%
+txt = ",,,,,rrttgg.....banana....rrr"
+x = txt.strip(",.grt")
+print(x)
+#%%
 a = "Kayseri,Nevşehir,Kırşehir İç Anadolu bölgesindedir"
 
 print(a.split("e")) # ['Kayseri', 'Nevşehir', 'Kırşehir İç Anadolu bölgesindedir']
