@@ -16,7 +16,8 @@ class Website(W):
 class Website1(Website):
     "child"
     def __init__(self, name, surname, ids):
-       # W.__init__(self, name, surname)  # you can use superclass's superclass's constructor
+        #W.__init__(self, name, surname)  # you can use superclass's superclass's constructor
+        Website.__init__(self, name, surname) 
         self.ids = ids
     
     def login(self):
