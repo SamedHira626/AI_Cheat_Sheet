@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jun 12 12:12:16 2018
-
-@author: user
-"""
 
 # 1) pandas hizli ve etkili for dataframes
 # 2) csv ve text dosyalarına acip inceleyip sonuclarimiza bu dosya tiplerine rahat bir sekilde kaydedbilir.
@@ -22,18 +17,18 @@ dictionary = {"NAME":["ali","veli","kenan","hilal","ayse","evren"],
 dataFrame1 = pd.DataFrame(dictionary)
 
 
-head = dataFrame1.head()
+head = dataFrame1.head(3)
 tail = dataFrame1.tail()
 
 # %%
 # pandas basic method
 
 print(dataFrame1.columns)
-
+print()
 print(dataFrame1.info())
-
+print()
 print(dataFrame1.dtypes)
-
+print()
 print(dataFrame1.describe())  # numeric feature = columns (age,maas)
 
 # %% indexing and slicing
@@ -46,25 +41,28 @@ dataFrame1["yeni feature"] = [-1,-2,-3,-4,-5,-6]
 
 print(dataFrame1.loc[:, "AGE"])
 
-print(dataFrame1.loc[:3, "AGE"])
+print(dataFrame1.loc[3, "AGE"])
 
-print(dataFrame1.loc[:3, "AGE":"NAME"])
+print(dataFrame1.loc[:3, "AGE"]) # 3 exclude in numpy, include in pandas 
 
-print(dataFrame1.loc[:3, ["AGE","NAME"]])
+print(dataFrame1.loc[:3, "AGE":"NAME"]) #NAME include
 
-print(dataFrame1.loc[::-1,:])
+print(dataFrame1.loc[:3, ["AGE","NAME"]]) # print only AGE and NAME
+
+print(dataFrame1.loc[::-1,:]) #reverse
 
 print(dataFrame1.loc[:,:"NAME"])
 
 print(dataFrame1.loc[:,"NAME"])
 
-print(dataFrame1.iloc[:,2])
+print(dataFrame1.iloc[:,[0,2]]) #iloc: integer location 
 
 # %% filtering
 
 filtre1 = dataFrame1.MAAS > 200
 
 filtrelenmis_data = dataFrame1[filtre1]
+# filtrelenmis_data = dataFrame1[dataFrame1.MAAS > 200]   # same with above
 
 filtre2 = dataFrame1.AGE <20
 
@@ -76,11 +74,11 @@ print(dataFrame1[dataFrame1.AGE > 60])
 import numpy as np
 
 ortalama_maas = dataFrame1.MAAS.mean()
+min_maas = dataFrame1.MAAS.min()
 
 # ortalama_maas_np = np.mean(dataFrame1.MAAS)
 
-
-dataFrame1["maas_seviyesi"] = ["dusuk" if ortalama_maas > each else "yuksek" for each in dataFrame1.MAAS]
+dataFrame1["maas_seviyesi"] = ["low" if ortalama_maas > each else "high" for each in dataFrame1.MAAS]
 
 #for each in dataFrame1.MAAS:
 #    if(ortalama_maas > each):
@@ -88,9 +86,7 @@ dataFrame1["maas_seviyesi"] = ["dusuk" if ortalama_maas > each else "yuksek" for
 #    else:
 #        print("yukse")
         
-
 dataFrame1.columns
-
 
 dataFrame1.columns = [ each.lower() for each in dataFrame1.columns] 
 
@@ -127,23 +123,4 @@ def multiply(age):
     return age*2
     
 dataFrame1["apply_metodu"] = dataFrame1.age.apply(multiply)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
